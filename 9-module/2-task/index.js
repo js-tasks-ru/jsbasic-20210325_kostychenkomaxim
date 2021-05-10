@@ -33,7 +33,6 @@ export default class Main {
 
     const response = await fetch('products.json');
     const products = await response.json();
-    console.log(products);
 		
     const productsGrid = new ProductsGrid(products);
     document.querySelector('[data-products-grid-holder]').innerHTML = '';
@@ -47,14 +46,11 @@ export default class Main {
     });
 
     document.body.addEventListener('product-add', (event) => {
-      console.log(event);
-      console.log('product-add');
       const product = event.detail;
       cart.addProduct(product);
     });
 
     stepSlider.elem.addEventListener('slider-change', (event) => {
-      console.log('eee', event);
       productsGrid.updateFilter({
         maxSpiciness: event.detail
       });
