@@ -52,7 +52,6 @@ export default class Modal {
   }
 
   escapeBtn = (event) => {
-    console.log(event);
     if (event.code === 'Escape') {
       this.hide();
     }
