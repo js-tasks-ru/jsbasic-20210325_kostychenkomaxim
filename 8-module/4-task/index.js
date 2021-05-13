@@ -126,7 +126,6 @@ export default class Cart {
 
     modal.setBody(this.cartLayout());
     modal.open();
-    console.log(this._modal);
 
     this._modal.elem.addEventListener("click", this.clickInModal);
 
